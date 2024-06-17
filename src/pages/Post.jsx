@@ -20,7 +20,8 @@ function Post () {
             });
 
             console.log(response.items);
-            setPost(response.items[0] || null); //se o item do array não existe, assume null como valor
+            await setPost(response.items[0] || null); //se o item do array não existe, assume null como valor
+            console.log(post)
             
         } catch (error) {
             setPost(null);
@@ -40,9 +41,8 @@ function Post () {
 
                         {post && (
                                 <>
-                                    <h1>{post.fields.blogPostTItle}</h1>
+                                    <h1>{post.fields.blogPostTitle}</h1>
                                     <div dangerouslySetInnerHTML={{__html:documentToHtmlString(post.fields.blogPostContent)}}>
-                                        
                                     </div>
                                     <Link to="/" className="btn btn-primary mt-4">Voltar para Home</Link>
                                 </>

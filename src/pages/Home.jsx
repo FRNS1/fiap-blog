@@ -51,7 +51,7 @@ function Home(){
                     <main className="col-md-8">
                         <h2 className="mb-3">{limit} Últimos posts</h2>
 
-                        {posts.map((item) => (
+                        {/* {posts.map((item) => (
                             <Card 
                                 key={item.sys.id}
                                 title={item.fields.blogPostTitle}
@@ -59,7 +59,7 @@ function Home(){
                                 link={'/post/' + item.fields.blogTextSlug}
                             />
 
-                        )) }
+                        )) } */}
 
                         <Link to="postlist/" className="btn btn-dark">Ver todos posts</Link>
                         

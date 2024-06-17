@@ -17,7 +17,7 @@ function PostList(){
 
     const getCategorias = async () => {
         const response = await contentfulClient.getEntries({
-            content_type: 'blogCategory', //qual a tabela?
+            content_type: 'blogCategory',
         });
 
         setCategorias(response.items);
@@ -35,6 +35,8 @@ function PostList(){
                 skip: skip,
                 order: '-sys.createdAt',
             });
+
+            console.log('responseeeee: ', response)
             
             setPosts(response.items);
             setTotalPages(Math.ceil(response.total / limit));
@@ -97,9 +99,9 @@ function PostList(){
                         {posts.map((item) => (
                             <Card 
                                 key={item.sys.id}
-                                title={item.fields.blogPostTitle}
-                                text={item.fields.blogPostDescription}
-                                link={'/post/' + item.fields.blogTextSlug}
+                                titulo={item.fields.blogPostTitle}
+                                texto={item.fields.blogPostDescription}
+                                linktexto={'/post/' + item.fields.blogTextSlug}
                             />
                         ))}
                         
