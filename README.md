@@ -12,11 +12,11 @@ Além do Vite e React, nosso projeto inclui:
 - Contentful (utilizado como backend para posts e categorias do blog)
 - Contentful rich-text-html-renderer
 
-Para iniciar o projeto:/
+Para iniciar o projeto:
 
 npm run dev
 
-Para construir o projeto para produção:/
+Para construir o projeto para produção:
 
 npm run build
 
